@@ -9,7 +9,7 @@ import statistics
 # Quandl Reference: https://docs.quandl.com/docs/parameters-2
 
 # Assign the Quandl API key
-quandl.ApiConfig.api_key = 'zN4XGhcQKUSCdyWgywPr'
+quandl.ApiConfig.api_key = '<fill me in>'
 
 # Set up initial header info and URL for Treasury bond prices
 treasury_headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu '
