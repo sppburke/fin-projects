@@ -173,7 +173,6 @@ if __name__ == '__main__':
                     current_position = []
 
                 # Calculate current P&L
-                print(wti_diff + rbob_diff + ulsd_diff)
                 pnl *= (1 + wti_diff + rbob_diff + ulsd_diff)
 
         # Update the running P&L
