@@ -2,14 +2,14 @@ import quandl
 import datetime
 import requests
 from bs4 import BeautifulSoup
-from pylab import arange, xlabel, ylabel, title, plot, show, legend
+from pylab import xlabel, ylabel, title, plot, show, legend
 import statistics
 
 # Treasury Reference: https://www.treasurydirect.gov/webapis/webapisecurities.htm
 # Quandl Reference: https://docs.quandl.com/docs/parameters-2
 
 # Assign the Quandl API key
-quandl.ApiConfig.api_key = '<fill me in>'
+quandl.ApiConfig.api_key = ''
 
 # Set up initial header info and URL for Treasury bond prices
 treasury_headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu '
@@ -175,7 +175,7 @@ def getSPY(start_date, end_date):
 
     except Exception:
         print('SPY (S&P 500 ETF) retrieval issue. Quitting.')
-        print(Exception.__traceback__)
+        print(Exception.with_traceback())
         quit()
 
 def getRF(start_date, end_date):
@@ -191,7 +191,7 @@ def getRF(start_date, end_date):
 
     except Exception:
         print('US Treasury yield retrieval issue. Quitting.')
-        print(Exception.__traceback__)
+        print(Exception.with_traceback())
         quit()
 
 def graphData(pnl_arr, spy_arr):
